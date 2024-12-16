@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite Especial - X-ONE BRASIL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="https://x-onebrasil.com.br/wp-content/uploads/2023/11/cropped-brasao-32x32.png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style> 
+        body{
+            justify-content: space-around;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            background-color: #f0f0f0;
+            padding: 2rem 6rem 0;
+            overflow-x: hidden;
+            font-family: "Montserrat", sans-serif;
+            background-image: url('https://x-onebrasil.com.br/wp-content/uploads/lp-eletrolar/bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        header{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+        }
+
+        header .header-text-wrapper{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 10px;
+        }
+
+        header .logo-black{
+            width: 180px;
+            height: 40px;
+        }
+
+        header h2{
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            margin: 0;
+            margin-right: -200px;
+        }
+
+        header h2 span{
+            color: #AE5893; 
+        }
+
+        header .date-wrapper{
+            background-color: #000;
+            border-radius: 5px;
+            padding: 1rem 4rem 1rem 1rem;
+            margin-right: -100px;
+        }
+
+        header .date-wrapper p{
+            font-size: 2rem;
+            font-weight: 900;
+            color: #fff;
+            margin: 0;
+        }
+
+        header .date-wrapper p span{
+            color: #AE5893; 
+        }
+
+        .container{
+            position: relative;
+            margin: 4rem 0;
+        }
+
+        .container .title{
+            font-weight: 400;
+            text-align: center;
+            margin-top: -10px;
+        }
+
+        .puzzle-container {
+            display: grid;
+            grid-template-columns: repeat(3, 20rem);
+            grid-template-rows: repeat(3, 10rem);
+            gap: 1px;
+            width: 60rem;
+            height: 30rem;
+        }
+
+        .puzzle-piece {
+            width: 20rem;
+            height: 10rem;
+            background-size: 60rem 30rem;
+            cursor: pointer;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            transition: transform 2s ease-in-out;
+        }
+
+        .video-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #AE5893;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            width: 12rem;
+        }
+
+        .video-button:hover {
+            background-color: #743b62;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        video{
+            width: 60rem;
+            height: 30rem;
+            object-fit: cover;
+        }
+
+        footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer .banner{
+            background: linear-gradient(to right, #AE5893, #0F3757);
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        footer .banner img{
+            width: 300px;
+        }
+
+        footer .banner img:first-child{
+            width: 200px;
+        }
+
+        footer .banner img:last-child{
+            margin-bottom: -8px;
+        }
+
+        footer .banner span{
+            color: #fff;
+            font-size: 2rem;
+            margin: 0 5px 0 0;
+        }
+
+        footer .second-row p{
+            font-size: 1.21rem;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        footer .adress{
+            color: #0066A1;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        footer .adress .light-blue-span{
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        footer .adress .blue-span{
+            font-weight: 700;
+        }
+
+        footer .banner .purple-span{
+            color: #fff;
+            font-weight: 700;
+            padding: 2px;
+        }
+
+        @media(max-width: 767px){
+            body{
+                padding: 0.5rem 1rem 1rem;
+                height: 100vh;
+            }
+            header{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                width: 100vw;
+            }
+
+            .logo-black{
+                width: 100px;
+                height: 20px;
+                margin-bottom: 10px;
+            }
+
+            header h2{
+                font-size: 1.2rem;
+                margin: 0;
+                margin-bottom: 10px;
+            }
+
+            .container{
+                margin: 0 0 1rem;
+                text-align: center;
+            }
+
+            .container .title{
+                font-size: 1.5rem;
+            }
+
+            .puzzle-container {
+                grid-template-columns: repeat(3, 7rem);
+                grid-template-rows: repeat(3, 3.5rem);
+                gap: 1px;
+                width: 21rem;
+                height: 10.5rem;
+                margin: auto;
+            }
+
+            .puzzle-piece {
+                width: 7rem;
+                height: 3.5rem;
+                background-size: 21rem 10.5rem;
+                cursor: pointer;
+                box-sizing: border-box;
+                border: 1px solid #ddd;
+                transition: transform 2s ease-in-out;
+            }
+
+            video{
+                width: 22rem;
+                height: 12rem;
+                object-fit: cover;
+                margin-top: 20px;
+            }
+
+            header .date-wrapper{
+                padding: 1rem 0;
+                width: 100vw;
+                margin: 0;
+                border-radius: 0;
+            }
+
+            header .date-wrapper p{
+                font-size: 1rem;
+                text-align: center;
+            }
+
+            .banner{
+                padding: 0 1rem;
+            }
+
+            footer .banner img{
+                width: 250px;
+            }
+
+            .banner .first-row{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 3px;
+            }
+
+            .banner .second-row p{
+                text-align: center;
+                font-size: 0.8rem;
+                max-width: 360px;
+                margin-top: 15px;
+                letter-spacing: 0;
+            }
+
+            footer .banner img {
+                width: 160px;
+            }   
+
+            footer .banner img:first-child{
+                width: 130px;
+                margin-top: -2px;
+            }   
+
+            footer .banner span{
+                font-size: 1.5rem;
+                margin-bottom: -9px;
+                margin-right: 2px;
+            }
+
+            footer .adress {
+                color: #0066A1;
+                font-size: 1.2rem;
+                text-align: center;
+            }
+
+            footer .banner .purple-span{
+                font-size: 1rem;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo-black" src="https://x-onebrasil.com.br/wp-content/uploads/lp-eletrolar/logo.png" alt="logo xone">
+        <h2>Convite <span>Especial</span></h2>
+        <div class="date-wrapper"> <p><span>15 a 18 JULHO | </span> 13h às 21h</p> </div>
+    </header>
+    <div class="container">
+        <h1 class="title">Monte o quebra cabeça e destrave a próxima etapa.</h1>
+        <div class="puzzle-container"></div>
+        <button class="video-button hidden" onclick="playVideoOne()"></button>
+
+        <div class="video-one-container hidden">
+        </div>
+
+        <div class="video-two-container hidden">
+        </div>
+    </div>
+
+    <footer>
+        <div class="banner">
+            <div class="first-row">
+                <img class="logo-white" src="https://x-onebrasil.com.br/wp-content/uploads/lp-eletrolar/logo-white.png" alt="logo xone">
+                <span>na</span>
+                <img src="https://x-onebrasil.com.br/wp-content/uploads/lp-eletrolar/logo-eletrolarshow.png" alt="logo eletrolar" class="logo-eletrolar">
+            </div>
+            <div class="second-row"> <p>A maior feira de eletroeletrônicos da américa latina!</p> </div>
+            <div class="third-row"><span class="purple-span">Rua 10 | Stand F110</span></div>
+        </div>
+        <p class="adress"> <span class="light-blue-span">Transamérica expo center</span> <br/> <span class="blue-span">São Paulo/SP</span></p>
+    </footer>
+
+    <script>
+        const puzzleContainer = document.querySelector('.puzzle-container');
+        const pieces = [];
+        let correctOrder = [];
+        let currentOrder = [];
+        let draggedPieceIndex = null;
+        let touchStartIndex = null;
+    
+        function initializePuzzle(img) {
+            pieces.length = 0;  // Clear previous pieces
+            correctOrder = Array.from({length: 9}, (_, i) => i);
+            currentOrder = Array.from({length: 9}, (_, i) => i);
+    
+            const pieceWidth = puzzleContainer.clientWidth / 3;
+            const pieceHeight = puzzleContainer.clientHeight / 3;
+    
+            for (let i = 0; i < 9; i++) {
+                const piece = document.createElement('div');
+                piece.classList.add('puzzle-piece');
+                piece.style.backgroundImage = `url(${img.src})`;
+                piece.style.backgroundPosition = `${-(i % 3) * pieceWidth}px ${-Math.floor(i / 3) * pieceHeight}px`;
+                piece.setAttribute('data-index', i);
+                piece.setAttribute('draggable', true);
+                piece.addEventListener('dragstart', handleDragStart);
+                piece.addEventListener('dragover', handleDragOver);
+                piece.addEventListener('drop', handleDrop);
+                piece.addEventListener('touchstart', handleTouchStart);
+                piece.addEventListener('touchmove', handleTouchMove);
+                piece.addEventListener('touchend', handleTouchEnd);
+                pieces.push(piece);
+            }
+    
+            shuffleArray(currentOrder);
+            renderPuzzle();
+        }
+    
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            renderPuzzle();
+
+            // render video one
+            let videoOneContainer = document.querySelector('.video-one-container');
+
+            let videoOneElement = document.createElement('video');
+            videoOneElement.id = 'videoOne';
+            videoOneElement.controls = true;
+            videoOneElement.playsInline = true;
+
+            let videoOneSource = document.createElement('source');
+            videoOneSource.src = 'https://x-onebrasil.com.br/wp-content/uploads/lp-eletrolar/video1.mp4';
+            videoOneSource.type = 'video/mp4';
+
+            videoOneElement.appendChild(videoOneSource);
+
+            videoOneContainer.appendChild(videoOneElement);
+
+        }
+    
+        function handleDragStart(event) {
+            draggedPieceIndex = parseInt(event.target.getAttribute('data-index'));
+        }
+    
+        function handleDragOver(event) {
+            event.preventDefault();
+        }
+    
+        function handleDrop(event) {
+            event.preventDefault();
+            const targetPieceIndex = parseInt(event.target.getAttribute('data-index'));
+            if (draggedPieceIndex !== null && draggedPieceIndex !== targetPieceIndex) {
+                swapPieces(draggedPieceIndex, targetPieceIndex);
+                renderPuzzle();
+                checkWin();
+            }
+            draggedPieceIndex = null;
+        }
+    
+        function handleTouchStart(event) {
+            const touch = event.touches[0];
+            const target = document.elementFromPoint(touch.clientX, touch.clientY);
+            if (target && target.classList.contains('puzzle-piece')) {
+                touchStartIndex = parseInt(target.getAttribute('data-index'));
+            }
+        }
+    
+        function handleTouchMove(event) {
+            event.preventDefault();
+        }
+    
+        function handleTouchEnd(event) {
+            const touch = event.changedTouches[0];
+            const target = document.elementFromPoint(touch.clientX, touch.clientY);
+            if (target && target.classList.contains('puzzle-piece')) {
+                const targetPieceIndex = parseInt(target.getAttribute('data-index'));
+                if (touchStartIndex !== null && touchStartIndex !== targetPieceIndex) {
+                    swapPieces(touchStartIndex, targetPieceIndex);
+                    renderPuzzle();
+                    checkWin();
+                }
+            }
+            touchStartIndex = null;
+        }
+    
+        function swapPieces(index1, index2) {
+            const temp = currentOrder[index1];
+            currentOrder[index1] = currentOrder[index2];
+            currentOrder[index2] = temp;
+        }
+    
+        function renderPuzzle() {
+            puzzleContainer.innerHTML = '';
+            currentOrder.forEach((orderIndex, i) => {
+                const piece = pieces[orderIndex];
+                piece.setAttribute('data-index', i);
+                puzzleContainer.appendChild(piece);
+            });
+        }
+    
+        function checkWin() {
+            if (currentOrder.join() === correctOrder.join()) {
+                const videoButton = document.querySelector('.video-button');
+                videoButton.textContent = 'Ver Vídeo'; 
+                videoButton.classList.remove('hidden');
+            }
+        }
+    
+        function playVideoOne() {
+            puzzleContainer.classList.add('hidden');
+            
+            const videoButton = document.querySelector('.video-button');
+            videoButton.classList.add('hidden');
+            
+            const videoOneContainer = document.querySelector('.video-one-container');
+            videoOneContainer.classList.remove('hidden');
+
+            // render video two
+
+            let videoTwoContainer = document.querySelector('.video-two-container');
+
+            let videoTwoElement = document.createElement('video');
+            videoTwoElement.id = 'videoTwo';
+            videoTwoElement.controls = true;
+            videoTwoElement.playsInline = true;
+
+            let videoTwoSource = document.createElement('source');
+            videoTwoSource.src = 'https://x-onebrasil.com.br/wp-content/uploads/lp-eletrolar/video2.mp4';
+            videoTwoSource.type = 'video/mp4';
+
+            videoTwoElement.appendChild(videoTwoSource);
+
+            videoTwoContainer.appendChild(videoTwoElement);
+
+            const videoPlayer = document.querySelector('.video-one-container video');
+            videoPlayer.play();
+            videoPlayer.onended = function() {
+                setTimeout(() => playVideoTwo(), 1000)    
+            }
+        }
+    
+        function playVideoTwo() {
+            const videoOneContainer = document.querySelector('.video-one-container');
+            videoOneContainer.classList.add('hidden');
+    
+            const videoTwoContainer = document.querySelector('.video-two-container');
+            videoTwoContainer.classList.remove('hidden');
+            console.log(videoTwoContainer)
+    
+            const videoPlayer = document.querySelector('.video-two-container video');
+            videoPlayer.play();
+        }
+    
+        document.addEventListener('DOMContentLoaded', () => {
+            const img = new Image();
+            img.src = 'https://x-onebrasil.com.br/wp-content/uploads/lp-eletrolar/img-puzzle.jpg';
+            img.onload = function() {
+                initializePuzzle(img);
+            };
+        });
+    </script>
+</body>
+</html>
